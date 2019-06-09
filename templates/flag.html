@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Level 3
+{% endblock %}
+
+{% block main %}
+    <div class="container-fluid">
+        <h1>Level 3</h1>
+        <p>
+            The 3rd and final challenge... One of the most severe vulnerabilities is remote code execution.
+            In this challenge you must travel across the servers file directory in order to achieve RCE. Once you have achieved
+            that you need to get the contents of the location "project/user.txt" where you will find a
+            string of characters. This is the "flag" for this game. If you find the string, input it in the "flag box" below to win the game.
+        </p>
+        <h2>Flag Box</h2>
+        <form action="/flag" method="post">
+            <div class="form-group">
+                <input class="form-control" name="flag" type="text" placeholder="Flag">
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

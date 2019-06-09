@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Upload
+{% endblock %}
+
+{% block main %}
+    <div class="container-fluid">
+        <h1>Upload</h1>
+    </div>
+    <form action="/upload" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="file" type="file">
+        </div>
+        <button class="btn btn-primary" type="submit">Upload</button>
+    </form>
+{% endblock %}
