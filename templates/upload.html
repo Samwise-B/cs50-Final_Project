@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Level 3
+{% endblock %}
+
+{% block main %}
+    <div class="container-fluid">
+        <h1>Upload</h1>
+        <p>
+            Tip: The server is importing a package from within the server files. The directory for such package is 'project/config/'.
+            If you still can't figure it out, read more on how python packages work when imported.
+        </p>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input class="form-control" name="file" type="file">
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" placeholder="Optional Name" name="name" type="text">
+            </div>
+            <button class="btn btn-primary" type="submit">Upload</button>
+        </form>
+    </div>
+{% endblock %}

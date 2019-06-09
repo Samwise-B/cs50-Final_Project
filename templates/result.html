@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+    <div class="container-fluid">
+        <h2>Result</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Password (32-Digit Hash)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">{{ rows['id'] }}</td>
+                    <td>{{ rows['username'] }}</td>
+                    <td>{{ rows['password'] }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Woops, looks like you should be able to gain access pretty easily. Who needs hacking programs when you have the google!
+            The hint should only really be used if you are thinking of giving up.
+        </p>
+        <p>
+            <button class="btn btn-primary" type="button" id="secret" data-toggle="collapse" data-target="#hintBox" aria-expanded="false" aria-controls="hintBox">
+            Hint
+            </button>
+            Only use if you're really stuck.
+        </p>
+        <div class="collapse" id="hintBox">
+            <div class="card card-body">
+            This algorithm is a hash function that produces a 128-bit, 16-byte hash value. Typically, it is expressed as a hex number that is 32 digits long.
+            Access must be gained, out dated hashing algorithms should do the trick! Old hash functions even have web-based hash crackers.
+            </div>
+        </div>
+    </div>
+{% endblock %}
