@@ -10,23 +10,13 @@
     </div>
     <form action="/login" method="post">
         <div class="form-group">
-            <input autocomplete="off" autofocus class="form-control" id="username" name="username" placeholder="Username" type="text" required>
+            <input autocomplete="off" autofocus class="form-control" id="uname" name="username" placeholder="Username" type="text" required>
         </div>
+        <p id="unameError"></p>
         <div class="form-group">
-            <input class="form-control" id="password" name="password" placeholder="Password" type="password" required>
+            <input class="form-control" id="passwd" name="password" placeholder="Password" type="password" required>
         </div>
-        <button class="btn btn-primary" type="submit" onsubmit="validate()">Log In</button>
+        <p id="passwdError"></p>
+        <button class="btn btn-primary" type="submit" onclick="custom_validate()">Log In</button>
     </form>
-    <script>
-        function validate() {
-            var username = document.getElementById("username");
-            var password = document.getElementById("password");
-            if (!username.checkValidity) {
-                username.setCustomValidity("You must enter a username.");
-            }
-            if (!password.checkValidity) {
-                password.setCustomValidity("You must enter a password.");
-            }
-        }
-    </script>
 {% endblock %}

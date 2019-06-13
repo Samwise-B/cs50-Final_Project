@@ -19,19 +19,17 @@
                 <tr>
                     <td scope="row">{{ rows['id'] }}</td>
                     <td>{{ rows['username'] }}</td>
-                    <td>{{ rows['password'] }}</td>
+                    <td><span id="hash_hint" onclick="reveal()">{{ rows['password'] }}</span></td>
                 </tr>
             </tbody>
         </table>
         <p>
             Woops, looks like you should be able to gain access pretty easily. Who needs hacking programs when you have the google!
-            The hint should only really be used if you are thinking of giving up.
         </p>
         <p>
             <button class="btn btn-primary" type="button" id="secret" data-toggle="collapse" data-target="#hintBox" aria-expanded="false" aria-controls="hintBox">
             Hint
             </button>
-            Only use if you're really stuck.
         </p>
         <div class="collapse" id="hintBox">
             <div class="card card-body">
@@ -40,4 +38,9 @@
             </div>
         </div>
     </div>
+    <script>
+        function reveal() {
+            $("#secret").css("display", "block");
+        }
+    </script>
 {% endblock %}

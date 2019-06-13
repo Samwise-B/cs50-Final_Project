@@ -1,1 +1,0 @@
-print("RCE TEST")

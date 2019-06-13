@@ -1,10 +1,19 @@
 input:invalid {
-  border: 2px solid red;
+  border: 2px solid darkgray;
 }
 
 input:valid {
   border: 2px solid black;
 }
+.lvl_2 {
+  background-color: SeaGreen;
+}
+.lvl_2 {
+  background-color: DarkMagenta;
+}
 #secret {
     display: None;
+}
+#hash_hint {
+  cursor: pointer;
 }
