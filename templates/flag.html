@@ -4,8 +4,15 @@
     Level 3
 {% endblock %}
 
+{% block head %}
+  {{ super() }} <!-- this line renders the contents of a block defined in layout.html -->
+  <style type="text/css">
+    main { background-color: DarkMagenta; }
+  </style>
+{% endblock %}
+
 {% block main %}
-    <div class="container-fluid lvl_3">
+    <div class="container-fluid">
         <h1>Level 3</h1>
         <p>
             The 3rd and final challenge... One of the most severe vulnerabilities is remote code execution.

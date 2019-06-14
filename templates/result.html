@@ -4,6 +4,13 @@
     Search
 {% endblock %}
 
+{% block head %}
+  {{ super() }} <!-- this line renders the contents of a block defined in layout.html -->
+  <style type="text/css">
+    main { background-color: #2E8B57; }
+  </style>
+{% endblock %}
+
 {% block main %}
     <div class="container-fluid">
         <h2>Result</h2>

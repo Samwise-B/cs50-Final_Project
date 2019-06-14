@@ -4,6 +4,13 @@
     Level 3
 {% endblock %}
 
+{% block head %}
+  {{ super() }} <!-- this line renders the contents of a block defined in layout.html -->
+  <style type="text/css">
+    main { background-color: DarkMagenta; }
+  </style>
+{% endblock %}
+
 {% block main %}
     <div class="container-fluid lvl_3">
         <h1>Upload</h1>
