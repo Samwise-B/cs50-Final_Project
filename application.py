@@ -88,7 +88,7 @@ def flag_check():
     if request.method == "GET":
         return render_template("flag.html")
     else:
-        flag = ''
+        flag = 'USR_L0C4L-Fil3_Inclus10n_BEgiNnerFLAG'
 
         if request.form.get("flag") != flag:
             return apology("The flag you entered is not correct. You can't guess it.")
@@ -135,7 +135,7 @@ def upload():
 @app.route('/uploads/<filename>')
 @login_required
 def uploaded(filename):
-    return send_file(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():

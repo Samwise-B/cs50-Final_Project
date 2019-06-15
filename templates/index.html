@@ -4,13 +4,22 @@
     Home
 {% endblock %}
 
+{% block head %}
+  {{ super() }} <!-- this line renders the contents of a block defined in layout.html -->
+  <style type="text/css">
+    .container {
+        min-height: 100vh;
+    }
+  </style>
+{% endblock %}
+
 {% block main %}
     <div class="container-fluid">
         <h2>Final Project</h2>
         <p>
         This web application is a hacking game. There are three levels to the game that involve elevating your priveleges within the web app,
         eventually leading to remote code execution (RCE). <strong>WARNING: Due to the nature of this application, it is not intended to be used as a functional
-        website. To avoid damaging files or putting your PC at risk, the server should be run on a virtual machine that is not exposed to the internet.</strong>
+        website. To avoid damaging files or putting your PC at risk, the server should be run on a virtual machine with a host-only network adapter.</strong>
         </p>
         <h3>LEVEL 1</h3>
         <p>

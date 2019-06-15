@@ -5,11 +5,24 @@ input:invalid {
 input:valid {
   border: 2px solid black;
 }
-.lvl_2 {
-  background-color: SeaGreen;
+main {
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
-.lvl_2 {
-  background-color: DarkMagenta;
+body {
+  background-color: #322f37;
+}
+footer {
+  padding-top:10px;
+  color: white;
+}
+.error {
+  text-align: center;
+  color: white;
+}
+#bottom {
+  bottom: 5px;
 }
 #secret {
     display: None;

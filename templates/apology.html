@@ -4,6 +4,24 @@
     Apology
 {% endblock %}
 
+{% block head %}
+  {{ super() }} <!-- this line renders the contents of a block defined in layout.html -->
+  <style type="text/css">
+    main {
+      box-shadow: 0 0 0 0;
+    }
+    body {
+      background-image: url("static/apology.jpg");
+      text-align: center;
+    }
+    .container {
+      height: 100vh;
+      background-color: transparent;
+    }
+  </style>
+{% endblock %}
+
 {% block main %}
-    <img alt="{{ top }}" class="border" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i.imgur.com/CsCgN7Ll.png" title="{{ top }}">
+    <h1 id="top" class="error">{{ top }}</h1>
+    <h3 id="bottom" class="error">{{ bottom }}</h3>
 {% endblock %}

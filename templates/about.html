@@ -4,13 +4,30 @@
     About
 {% endblock %}
 
+{% block head %}
+  {{ super() }} <!-- this line renders the contents of a block defined in layout.html -->
+  <style type="text/css">
+    .container {
+        min-height: 100vh;
+    }
+  </style>
+{% endblock %}
+
 {% block main %}
     <div class="container-fluid">
         <h1>About</h2>
         <p>
             For my final project I decided to build on what we have learnt on the course in order to create a simple flask web app game. The idea behind the game is to learn about potential security flaws that occur
             when developing a dynamic flask application. The "hacking" puzzle game, is aimed at people like myself, who are novice programmers that are interested in learning web development and a few basic web application security
-            vulnerabilities. This puzzle game is a simple abstract representation of actual security flaws that you would see in the wild designed in a way that is hopefully fun and educational.
+            vulnerabilities. This puzzle game is a simple representation of actual security flaws that you would see in the wild designed in a way that is hopefully fun and educational.
+        </p>
+        <h3>Requirements</h3>
+        <p>
+            The game is designed to be easy enough for anyone new to computer science to complete. If you completed CS50 you will most likely have the skills needed to beat the game.
+        </p>
+        <h3>Contact</h3>
+        <p>
+            If you want to contact me for any reason, you can reach me by twitter @Skyshifter1
         </p>
     </div>
 {% endblock %}

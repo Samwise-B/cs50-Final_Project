@@ -4,12 +4,36 @@
     You Win
 {% endblock %}
 
+{% block head %}
+  {{ super() }} <!-- this line renders the contents of a block defined in layout.html -->
+  <style type="text/css">
+    body { background-image: url("static/alien.png"); }
+  </style>
+{% endblock %}
+
 {% block main %}
     <div class="container-fluid">
-        <h1>Winner, Winner, Chicken Dinner...</h1>
+        <h1>Welcome to the Main Frame</h1>
         <p>
             Congratulations, you have successfully completed all three levels and achieved remote code execution. Unless you cheated.
-            Either way, I hope this was a learning experience for anyone that chose to play. If you enjoyed this, you might want to look into CTFs. --INSERT CTF LINKS--
+            Either way, I hope this was a learning experience for anyone that chose to play. If you enjoyed this, you might want to look into CTFs. CTFs are generally
+            more complicated than this game but are an interesting approach at learning cybersecurity.
+        </p>
+        <div class="container">
+            <iframe width="960" height="720" src="https://www.youtube.com/embed/Bmz67ErIRa4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p>
+            I haven't played CTFs yet, I felt I needed to learn more about the basic of web programming but these are some popular sites I have seen recommended multiple times for
+            learning about cybersecurity.
+        </p>
+        <ul>
+            <li><a href="https://overthewire.org/wargames/">OverTheWire</a></li>
+            <li><a href="https://www.hackthebox.eu/">HackTheBox</a></li>
+            <li><a href="https://www.vulnhub.com/">VulnHub</a></li>
+        </ul>
+        <p>
+            You should also check out <a href="https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w">LiveOverflow</a> and <a href="https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA">IppSec</a> both of them have good
+            content on hacking. LiveOverflow has great videos on how to break down learning cybersecurity into more digestable chunks, I recommend that for anyone who's a novice, like me.
         </p>
         <h3>Excerpt From "The Hacker's Manifesto"</h1>
         <p>
@@ -48,6 +72,7 @@ after all, we're all alike."
 This was the last published file written by The Mentor. Shortly after
 releasing it, he was busted by the FBI.
         </p>
+        <h3>Feedback</h3>
         <p>
             Thanks for playing, if you managed to beat the game contact me on twitter @Skyshifter1
         </p>

@@ -7,12 +7,12 @@
 {% block head %}
   {{ super() }} <!-- this line renders the contents of a block defined in layout.html -->
   <style type="text/css">
-    main { background-color: DarkMagenta; }
+    body { background-color: #483D8B; }
   </style>
 {% endblock %}
 
 {% block main %}
-    <div class="container-fluid lvl_3">
+    <div class="container-fluid">
         <h1>Upload</h1>
         <p>
             Tip: The server is importing a package from within the server files. The directory for such package is 'project/config/'.
@@ -20,10 +20,10 @@
         </p>
         <form action="/upload" method="post" enctype="multipart/form-data">
             <div class="form-group">
-                <input class="form-control" name="file" type="file">
+                <input class="form-control" name="file" type="file" required>
             </div>
             <div class="form-group">
-                <input autocomplete="off" autofocus class="form-control" placeholder="Optional Name" name="name" type="text">
+                <input autocomplete="off" class="form-control" placeholder="Optional Name" name="name" type="text">
             </div>
             <button class="btn btn-primary" type="submit">Upload</button>
         </form>

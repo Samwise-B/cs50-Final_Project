@@ -7,7 +7,7 @@
 {% block head %}
   {{ super() }} <!-- this line renders the contents of a block defined in layout.html -->
   <style type="text/css">
-    main { background-color: DarkMagenta; }
+    body { background-color: #483D8B; }
   </style>
 {% endblock %}
 
@@ -16,8 +16,8 @@
         <h1>Level 3</h1>
         <p>
             The 3rd and final challenge... One of the most severe vulnerabilities is remote code execution.
-            In this challenge you must travel across the servers file directory in order to achieve RCE. Once you have achieved
-            that you need to get the contents of the location "project/user.txt" where you will find a
+            In this challenge you must travel across the servers file directory in order to achieve RCE. This last challenge may require writing some code
+            or using prewritten code. Once you have achieved RCE you need to get the contents of the txt file "user.txt" where you will find a
             string of characters. This is the "flag" for this game. If you find the string, input it in the "flag box" below to win the game.
         </p>
         <h2>Flag Box</h2>
