@@ -7,7 +7,7 @@
 {% block head %}
   {{ super() }} <!-- this line renders the contents of a block defined in layout.html -->
   <style type="text/css">
-    .container {
+    main {
         min-height: 100vh;
     }
   </style>
@@ -21,10 +21,13 @@
         eventually leading to remote code execution (RCE). <strong>WARNING: Due to the nature of this application, it is not intended to be used as a functional
         website. To avoid damaging files or putting your PC at risk, the server should be run on a virtual machine with a host-only network adapter.</strong>
         </p>
-        <h3>LEVEL 1</h3>
+        <div class="container" id="image">
+            <img src="static/hax.jpg" class="rounded">
+        </div>
+        <h3>Level 1</h3>
         <p>
         The first challenge requires poking and proding to find what you're looking for... You must locate a resource uniformly, you will know when you find it
-        and if you can't find the resource you can always go bust. The answer is obvious.
+        and if you can't find the resource you can always <a href="https://github.com/OJ/gobuster" id="hiddenLink">go bust</a>. The answer is obvious.
         </p>
         <p>
             <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -35,7 +38,7 @@
             <div class="card card-body">
             <a href="https://www.owasp.org/index.php/Top_10-2017_A5-Broken_Access_Control">Access Control</a> is an important part of web app security, although
             it isn't the most common type of vulnerability, it is considered Top 10 web app vulnerabilities in 2017 by OWASP.
-            Don't overthink it, if you're a beginner you might want to try guessing. "Common access control vulnerabilities include: Bypassing access control checks by modifying the URL, internal application
+            Don't overthink it, you might want to try guessing. "Common access control vulnerabilities include: Bypassing access control checks by modifying the URL, internal application
             state, or the HTML page" - From OWASP broken access control
             </div>
         </div>

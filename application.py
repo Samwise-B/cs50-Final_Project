@@ -48,7 +48,7 @@ db.create_all()
 # ensure filename has ALLOWED_EXTENSION
 def allowed_file(filename):
     return '.' in filename and \
-           filename.rsplit('.')[1].lower() in ALLOWED_EXTENSIONS # missing paramater in rsplit causes file name vulnerability
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
 # The Home page is accessible to anyone
@@ -88,7 +88,7 @@ def flag_check():
     if request.method == "GET":
         return render_template("flag.html")
     else:
-        flag = 'USR_L0C4L-Fil3_Inclus10n_BEgiNnerFLAG'
+        flag = 'USR_B4D_Fil3_R3str1cTi0n_BEgiNnerFLAG'
 
         if request.form.get("flag") != flag:
             return apology("The flag you entered is not correct. You can't guess it.")

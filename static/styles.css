@@ -17,6 +17,12 @@ footer {
   padding-top:10px;
   color: white;
 }
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
 .error {
   text-align: center;
   color: white;
@@ -29,4 +35,7 @@ footer {
 }
 #hash_hint {
   cursor: pointer;
+}
+#hiddenLink {
+  color: #212529;
 }
